@@ -16,5 +16,13 @@ createApp({
         },
       ]
     }
+  },
+  methods:{
+    manageDoneTasks(index){
+      return this.todo[index].done == true ? 'task-done' : '';
+    },
+    deleteTasks(index){
+      return this.todo.splice(index, 1);
+    },
   }
 }).mount('#app')

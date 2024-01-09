@@ -12,6 +12,11 @@
     general 
 */
 
+.task-done{
+    text-decoration: line-through;
+    background-color: rgba(0, 255, 0, 0.7);
+}
+
 /* 
     header 
 */

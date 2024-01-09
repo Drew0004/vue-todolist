@@ -35,8 +35,11 @@
 
             <!-- List section -->
             <ul>
-                <li v-for="(listElem, i) in todo"> {{listElem.task}}</li>
+                <li v-for="(listElem, i) in todo" :class="manageDoneTasks(i)"> 
+                    {{listElem.task}} <span @click="deleteTasks(index)" class="ms-5"><i class="bi bi-x-circle"></i></span>
+                </li>
             </ul>
+            <p v-if="todo.length == 0">Non ci sono tasks :(</p>
         
         </div>
         
