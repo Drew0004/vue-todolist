@@ -7,7 +7,7 @@ createApp({
       todo:[
         {
           task: 'Creare Milestone 1',
-          done: true
+          done: false
         },        {
           task: 'Creare Milestone 2',
           done: false
@@ -19,7 +19,7 @@ createApp({
     }
   },
   methods:{
-    manageDoneTasks(index){
+    manageDoneTasksClass(index){
       return this.todo[index].done == true ? 'task-done' : 'task-undone';
     },
     deleteTasks(index){
@@ -35,6 +35,11 @@ createApp({
         console.log(this.todo)
         this.newtodo = '';
       }
+    },
+    manageDoneTasks(index){
+      if (this.todo[index].done === false){
+        this.todo[index].done = true;
+      };
     }
   }
 }).mount('#app')
