@@ -11,10 +11,13 @@
 /* 
     general 
 */
+.text-white{
+    color: white;
+}
 
 .task-done{
     text-decoration: line-through;
-    background-color: rgba(182, 255, 191, 0.8);
+    background-color: rgba(46, 216, 66, 0.8);
     border-radius: 10px;
 }
 
@@ -24,7 +27,7 @@
 }
 
 .red-color{
-    color: red;
+    color: rgb(149, 32, 32);
 }
 
 .green-color{

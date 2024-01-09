@@ -24,13 +24,13 @@
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
 
-    <body>
+    <body class="bg-dark">
 
         <div id="app">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12">
-                        <h2 class="my-3 text-center fs-2 fw-bold">TO DO LIST</h2>
+                        <h2 class="text-white my-3 text-center fs-2 fw-bold">TO DO LIST</h2>
                     </div>
                     <!-- Input section -->
                     <div class="col-6 text-center my-3">
@@ -38,7 +38,7 @@
 
                         <!-- debug Input -->
                         <!-- <p>{{newtodo}}</p> -->
-                        <button @click="createNewTask(newtodo)" type="button" class="mt-2 btn btn-primary">Aggiungi</button>
+                        <button @click="createNewTask(newtodo)" type="button" class="mt-3 btn btn-primary">Aggiungi</button>
                     </div>
 
                     <div class="col-12">
@@ -50,7 +50,7 @@
                                 <span @click="deleteTasks(i)" class="red-color ms-4"><i class="bi bi-x-circle"></i></span>
                             </li>
                         </ul>
-                        <p class="fs-4 text-center" v-if="todo.length == 0">Non ci sono tasks :(</p>
+                        <p class="task-undone fs-4 py-5 text-center" v-if="todo.length == 0">Non ci sono tasks</p>
                     </div>
                 </div>
 
