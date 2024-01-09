@@ -3,13 +3,14 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      newtodo: '',
       todo:[
         {
           task: 'Creare Milestone 1',
-          done: false
+          done: true
         },        {
           task: 'Creare Milestone 2',
-          done: false
+          done: true
         },        {
           task: 'Creare Milestone 3',
           done: false
@@ -19,10 +20,22 @@ createApp({
   },
   methods:{
     manageDoneTasks(index){
-      return this.todo[index].done == true ? 'task-done' : '';
+      return this.todo[index].done == true ? 'task-done' : 'task-undone';
     },
     deleteTasks(index){
       return this.todo.splice(index, 1);
     },
+    createNewTask(newTask){
+      if (newTask.trim().length > 3){
+        let newObject = {
+          task: newTask,
+          done: false
+        }
+        this.todo.push(newObject);
+        console.log(this.todo)
+      }
+    }
   }
 }).mount('#app')
+
+      

@@ -14,7 +14,17 @@
 
 .task-done{
     text-decoration: line-through;
-    background-color: rgba(0, 255, 0, 0.7);
+    background-color: rgba(20, 220, 30, 0.8);
+    border-radius: 10px;
+}
+
+.task-undone{
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+ul{
+    list-style: none;
 }
 
 /* 
