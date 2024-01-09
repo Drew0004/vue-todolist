@@ -10,7 +10,7 @@ createApp({
           done: true
         },        {
           task: 'Creare Milestone 2',
-          done: true
+          done: false
         },        {
           task: 'Creare Milestone 3',
           done: false
@@ -33,6 +33,7 @@ createApp({
         }
         this.todo.push(newObject);
         console.log(this.todo)
+        this.newtodo = '';
       }
     }
   }

@@ -29,12 +29,16 @@
         <div id="app">
             <div class="container">
                 <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2 class="my-3 text-center fs-2 fw-bold">TO DO LIST</h2>
+                    </div>
                     <!-- Input section -->
                     <div class="col-6 text-center my-3">
-                        <input type="text" v-model="newtodo" placeholder="Inserisci nuovi task...">
+                        <input type="text" class="form-control" @keyup.enter="createNewTask(newtodo)" v-model="newtodo" placeholder="Inserisci nuovi task...">
+
                         <!-- debug Input -->
                         <!-- <p>{{newtodo}}</p> -->
-                        <button @click="createNewTask(newtodo)">Aggiungi</button>
+                        <button @click="createNewTask(newtodo)" type="button" class="mt-2 btn btn-primary">Aggiungi</button>
                     </div>
 
                     <div class="col-12">
