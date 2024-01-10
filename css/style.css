@@ -38,6 +38,10 @@ ul{
     list-style: none;
 }
 
+.c-point{
+    cursor: pointer;
+}
+
 /* 
     header 
 */
