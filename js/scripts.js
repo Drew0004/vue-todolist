@@ -28,7 +28,7 @@ createApp({
     createNewTask(newTask){
       if (newTask.trim().length > 3){
         let newObject = {
-          task: newTask,
+          task: newTask.trim(),
           done: false
         }
         this.todo.push(newObject);
@@ -39,6 +39,8 @@ createApp({
     manageDoneTasks(index){
       if (this.todo[index].done === false){
         this.todo[index].done = true;
+      }else{
+        this.todo[index].done = false;
       };
     }
   }
